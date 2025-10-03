@@ -2,5 +2,13 @@
   "functions": {
     "source": "functions",
     "runtime": "nodejs18"
+  },
+  "hosting": {
+    "public": "public",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      { "source": "/conteudos", "function": "api" },
+      { "source": "/conteudos/**", "function": "api" }
+    ]
   }
 }
